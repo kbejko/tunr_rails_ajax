@@ -1,0 +1,24 @@
+<br>
+<div class="test_ajax_get">AJAX GET!</div>
+
+<label>Name:</label>
+<input class="name" type="text">
+<label>Photo URL:</label>
+<input class="photo_url" type="text">
+<label>Nationality:</label>
+<input class="nationality" type="text">
+
+<div class="test_ajax_post">AJAX POST!</div>
+<div class="test_ajax_put">AJAX PUT!</div>
+<div class="test_ajax_delete">AJAX DELETE!</div>
+
+<h1>Artists</h1>
+<ul class="artists">
+  <% @artists.each do |artist| %>
+  <li>
+    <a href="/artists/<%= artist.id %>">
+      <%= artist.name %>
+    </a>
+  </li>
+  <% end %>
+</ul>
